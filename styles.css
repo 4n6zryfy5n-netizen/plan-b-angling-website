@@ -19,12 +19,13 @@ img{max-width:100%;display:block}
 .site-header{position:sticky;top:0;z-index:20;background:rgba(247,247,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-weight:800;letter-spacing:.01em}
+.brand img{height:42px;width:auto}
 .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green-2));display:grid;place-items:center;color:#fff;font-weight:800}
 nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
 nav a{text-decoration:none;font-weight:650;color:var(--ink);font-size:.95rem}
 .hero{padding:84px 0 64px;background:
-linear-gradient(100deg,rgba(17,38,29,.82),rgba(17,38,29,.35)),
-url('assets/hero-lake.jpg') center/cover no-repeat;
+linear-gradient(100deg,rgba(17,38,29,.82),rgba(17,38,29,.30)),
+url('assets/hero-lake.webp') center/cover no-repeat;
 color:white;min-height:62vh;display:flex;align-items:end}
 .hero-card{max-width:760px}
 .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;opacity:.86}
@@ -43,15 +44,25 @@ h3{font-size:1.15rem;margin:28px 0 8px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
 .card strong{display:block;font-size:1.45rem;margin-top:6px}
 .placeholder{color:#7b3f00;background:#fff2cf;border:1px dashed #d5a447;padding:2px 7px;border-radius:6px;font-weight:700}
-.media-placeholder{aspect-ratio:4/3;border-radius:var(--radius);display:grid;place-items:center;text-align:center;padding:28px;background:linear-gradient(145deg,#dce9df,#c7d9cf);color:#355343;border:1px solid #b8cbbf;font-weight:700}
+.photo{width:100%;border-radius:var(--radius);object-fit:cover;box-shadow:var(--shadow);border:1px solid var(--line)}
+.photo.landscape{aspect-ratio:4/3}
+.photo.wide{aspect-ratio:16/9}
+.photo.portrait{aspect-ratio:4/5}
+.photo.square{aspect-ratio:1/1}
+.figure{margin:0}
+.figure figcaption{font-size:.9rem;color:var(--muted);margin-top:8px}
 .two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .faq{display:grid;gap:14px}
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 summary{cursor:pointer;font-weight:800}
 .species{columns:2;column-gap:32px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.gallery .media-placeholder{aspect-ratio:1/1}
+.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.gallery figcaption{padding:9px 11px;font-size:.86rem;color:var(--muted)}
 .notice{padding:18px 20px;background:#edf4ef;border-left:5px solid var(--green);border-radius:10px}
+.logo-strip{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.logo-strip img{max-width:min(420px,90%);height:auto;background:white;padding:8px;border-radius:8px}
 .site-footer{padding:42px 0;background:#16261e;color:#e8efe9}
 .site-footer a{color:white}
 .small{font-size:.92rem;color:var(--muted)}
