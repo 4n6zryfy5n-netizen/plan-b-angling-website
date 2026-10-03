@@ -18,6 +18,21 @@
         throw new TypeError("Configuration must be a JSON object");
       }
 
+      document.querySelectorAll("[data-config-href]").forEach(function (element) {
+        var value = config[element.dataset.configHref];
+        try {
+          var url = new URL(value);
+          if (url.protocol !== "https:" || url.hostname !== "planbanglingcic.sharepoint.com" ||
+              !url.pathname.startsWith("/:b:/")) {
+            return;
+          }
+          element.href = url.href;
+          element.hidden = false;
+        } catch (_) {
+          // Keep unavailable or invalid document links hidden.
+        }
+      });
+
       document.querySelectorAll("[data-config-key]").forEach(function (element) {
         var key = element.dataset.configKey;
         var value = config[key];
