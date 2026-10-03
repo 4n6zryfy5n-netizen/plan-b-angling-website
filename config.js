@@ -22,8 +22,8 @@
         var value = config[element.dataset.configHref];
         try {
           var url = new URL(value);
-          if (url.protocol !== "https:" || url.hostname !== "planbanglingcic.sharepoint.com" ||
-              !url.pathname.startsWith("/:b:/")) {
+          if (url.protocol !== "https:" || url.hostname !== "planbangling.net" ||
+              !["/documents/rules.pdf", "/documents/privacy.pdf"].includes(url.pathname)) {
             return;
           }
           element.href = url.href;

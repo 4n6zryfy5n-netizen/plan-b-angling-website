@@ -1,0 +1,5 @@
+/documents/*.pdf
+  Content-Type: application/pdf
+  Content-Disposition: inline
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
